@@ -94,7 +94,7 @@ function callSendAPI(senderPsid, response) {
   });
 }
 
-/*
+
 const { OpenAI } = require("openai");
 
 const client = new OpenAI({
@@ -115,6 +115,5 @@ async function getGTP(senderPsid,receivedMessage) {
 
   callSendAPI(senderPsid, response);
   console.log(result.choices[0].message?.content);
-}*/
-
+}
 
