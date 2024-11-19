@@ -93,7 +93,7 @@ function callSendAPI(senderPsid, response) {
 }
 
 
-callSendPG(8583465948405334, "sdf..");
+callSendPG(8918987148164956, "sdf..");
 // Sends response messages via the Send API
 function callSendPG(senderPsid, response) {
   // The page access token we have generated in your app settings
