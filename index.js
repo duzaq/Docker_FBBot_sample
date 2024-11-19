@@ -4,8 +4,8 @@ const request = require('request');
 
 const app = express().use(bodyParser.json());
 
-const PAGE_ACCESS_TOKEN = 'EAB3iEM4N3iUBOZC6y4Kz2e8KBS4DWgkzmESI7rDw7GpZBful3aKZCUyAVxoicAZBVtNtdEtex5r922ywA548aS561OlNgFdaNSE17vcILVpuN0Xs9vO4cbYzhUaZBZAZARH6F6nmqqOFgFo9vpX5V7KrSn1XEilExLBne17Ujbf33INxWfCZAEgKpUXb8eKoSkuWeHNPRRMXDzcAxgpagwZDZD';
-const VERIFY_TOKEN = '123';
+const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
+const VERIFY_TOKEN = process.env.VERIFY_TOKEN;
 
 app.listen(process.env.PORT, () => console.log('webhook is listening on' + process.env.PORT));
 
@@ -22,7 +22,7 @@ app.post('/webhook', (req, res) => {
 
       if (webhookEvent.message) {
         handleMessage(senderPsid, webhookEvent.message);
-        getGTP(senderPsid, webhookEvent.message);
+        //getGTP(senderPsid, webhookEvent.message);
       } else if (webhookEvent.postback) {
         handlePostback(senderPsid, webhookEvent.postback);
       }
@@ -93,12 +93,11 @@ function callSendAPI(senderPsid, response) {
   });
 }
 
-
+/*
 const { OpenAI } = require("openai");
 
 const client = new OpenAI({
-  apiKey:
-    "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", // This is the default and can be omitted
+  apiKey: process.env.TOKEN_GPT, // This is the default and can be omitted
 });
 
 async function getGTP(senderPsid,receivedMessage) {
@@ -115,6 +114,6 @@ async function getGTP(senderPsid,receivedMessage) {
 
   callSendAPI(senderPsid, response);
   console.log(result.choices[0].message?.content);
-}
+}*/
 
 
