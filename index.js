@@ -53,7 +53,7 @@ function handleMessage(senderPsid, receivedMessage) {
 
   if (receivedMessage.text) {    
     response = {
-      "text": `You sent the message: "${gerarTextoAleatorio()}".`
+      "text": `${gerarTextoAleatorio()}`
     };
   }  
 
