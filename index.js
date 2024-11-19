@@ -7,7 +7,7 @@ const app = express().use(bodyParser.json());
 const PAGE_ACCESS_TOKEN = 'EAB3iEM4N3iUBOZC6y4Kz2e8KBS4DWgkzmESI7rDw7GpZBful3aKZCUyAVxoicAZBVtNtdEtex5r922ywA548aS561OlNgFdaNSE17vcILVpuN0Xs9vO4cbYzhUaZBZAZARH6F6nmqqOFgFo9vpX5V7KrSn1XEilExLBne17Ujbf33INxWfCZAEgKpUXb8eKoSkuWeHNPRRMXDzcAxgpagwZDZD';
 const VERIFY_TOKEN = '123';
 
-app.listen(9000, () => console.log('webhook is listening on 1337'));
+app.listen(80, () => console.log('webhook is listening on 80'));
 
 app.post('/webhook', (req, res) => {
   let body = req.body;
