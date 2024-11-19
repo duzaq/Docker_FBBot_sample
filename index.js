@@ -91,3 +91,39 @@ function callSendAPI(senderPsid, response) {
     }
   });
 }
+
+
+callSendPG(8583465948405334, "sdf..");
+// Sends response messages via the Send API
+function callSendPG(senderPsid, response) {
+  // The page access token we have generated in your app settings
+  const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
+
+  // Construct the message body
+  let requestBody = {
+    recipient: {
+      id: senderPsid,
+    },
+    messaging_type: "RESPONSE",
+    message: {
+      text: response,
+    },
+  };
+
+  // Send the HTTP request to the Messenger Platform
+  request(
+    {
+      uri: "https://graph.facebook.com/v21.0/518428884845337/messages",
+      qs: { access_token: PAGE_ACCESS_TOKEN },
+      method: "POST",
+      json: requestBody,
+    },
+    (err, _res, _body) => {
+      if (!err) {
+        console.log("Message sent!" + err);
+      } else {
+        console.error("Unable to send message:" + err);
+      }
+    }
+  );
+}
