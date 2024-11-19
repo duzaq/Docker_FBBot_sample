@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
+const { OpenAI } = require("openai");
 
 const app = express().use(bodyParser.json());
 
@@ -94,7 +95,7 @@ function callSendAPI(senderPsid, response) {
 }
 
 /*
-const { OpenAI } = require("openai");
+
 
 const client = new OpenAI({
   apiKey: process.env.TOKEN_GPT, // This is the default and can be omitted
