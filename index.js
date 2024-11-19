@@ -11,6 +11,7 @@ app.listen(80, () => console.log('webhook is listening on 80'));
 
 app.post('/webhook', (req, res) => {
   let body = req.body;
+  console.log(body);
 
   if (body.object === 'page') {
     body.entry.forEach(entry => {
