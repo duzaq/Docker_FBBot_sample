@@ -4,8 +4,8 @@ const request = require('request');
 
 const app = express().use(bodyParser.json());
 
-const PAGE_ACCESS_TOKEN = 'EAAPLviyDav0BOZCs799OdMMThYL2oB5m7SThFSeAOeRD3dZCGwQP9OrLqJ8lsThoLxydCJZCuciZBdD0jQV9HTGKP29XlUPpDocMbG975Iz8OQAo9JJeSUE9A5ck8iCS3DTfwFAmMy2smEHOLpWcZB9vy2bbZBOwq7sC8MsZBsFR9Y1Fqxh8y6mnrSzkgqcbt9PH2wq2vdOxHbbP2cX';
-const VERIFY_TOKEN = '!digitalisDouala';
+const PAGE_ACCESS_TOKEN = 'EAB3iEM4N3iUBOZC6y4Kz2e8KBS4DWgkzmESI7rDw7GpZBful3aKZCUyAVxoicAZBVtNtdEtex5r922ywA548aS561OlNgFdaNSE17vcILVpuN0Xs9vO4cbYzhUaZBZAZARH6F6nmqqOFgFo9vpX5V7KrSn1XEilExLBne17Ujbf33INxWfCZAEgKpUXb8eKoSkuWeHNPRRMXDzcAxgpagwZDZD';
+const VERIFY_TOKEN = '123';
 
 app.listen(9000, () => console.log('webhook is listening on 1337'));
 
